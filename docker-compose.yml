@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  dev:
+    image: node:12-alpine
+    container_name: portfolio
+    working_dir: /app
+    volumes:
+      - ./:/app
+    user: 1000:1000
+    command: sh -c "yarn && yarn start"
+    ports:
+      - 8000:8000
