@@ -1,10 +1,10 @@
-require(`dotenv`).config({
-  path: `.env`,
-})
-
 module.exports = {
   siteMetadata: {
-    siteTitleAlt: `Cara - Gatsby Starter Portfolio`,
+    siteTitle: `Jana`,
+    siteTitleAlt: `Jana Rajakumar | Portfolio`,
+    siteHeadline: `Full Stack Web Developer | Freelancer | Ninja`,
+    siteUrl: `http://jana19.org/`,
+    siteDescription: `I’m passionate about creating great product experiences with clean and maintainable code`
   },
   plugins: [
     {
@@ -12,20 +12,14 @@ module.exports = {
       options: {},
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: process.env.GOOGLE_ANALYTICS_ID,
-      },
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Cara - @lekoarts/gatsby-theme-cara`,
-        short_name: `Cara`,
-        description: `Playful and Colorful One-Page portfolio featuring Parallax effects and animations`,
+        name: `Jana Rajakumar`,
+        short_name: `Jana`,
+        description: `Full Stack Web Developer | Freelancer | Ninja`,
         start_url: `/`,
         background_color: `#141821`,
-        theme_color: `#f6ad55`,
+        theme_color: `#491E5A`,
         display: `standalone`,
         icons: [
           {
