@@ -7,7 +7,7 @@ import About from "@lekoarts/gatsby-theme-cara/src/components/about"
 import Contact from "@lekoarts/gatsby-theme-cara/src/components/contact"
 
 const Cara = () => {
-  const isMobile = window.innerWidth <= 450 
+  const isMobile = window && window.innerWidth <= 450 
   return (
     <Layout>
       <Parallax pages={isMobile ? 7.2 : 5}>
