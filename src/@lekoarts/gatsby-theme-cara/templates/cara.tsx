@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { Parallax } from "react-spring/renderprops-addons.cjs"
 import Layout from "@lekoarts/gatsby-theme-cara/src/components/layout"
 import Hero from "@lekoarts/gatsby-theme-cara/src/components/hero"
@@ -7,7 +7,12 @@ import About from "@lekoarts/gatsby-theme-cara/src/components/about"
 import Contact from "@lekoarts/gatsby-theme-cara/src/components/contact"
 
 const Cara = () => {
-  const isMobile = (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1)
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth <= 450) 
+  }, [])
+
   return (
     <Layout>
       <Parallax pages={isMobile ? 7.2 : 5}>
